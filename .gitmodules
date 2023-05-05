@@ -1,3 +1,0 @@
-[submodule "freeRtosLib"]
-	path = freeRtosLib
-	url = https://github.com/FreeRTOS/FreeRTOS.git
