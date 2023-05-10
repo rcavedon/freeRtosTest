@@ -18,10 +18,11 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-#include "FreeRTOS.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "FreeRTOS.h"
+#include <stdio.h>
 
 /* USER CODE END Includes */
 
@@ -36,7 +37,17 @@
 
 /* Private macro -------------------------------------------------------------*/
 /* USER CODE BEGIN PM */
+int _write(int file, char *ptr, int len)
+{
+  (void)file;
+  int DataIdx;
 
+  for (DataIdx = 0; DataIdx < len; DataIdx++)
+  {
+     ITM_SendChar((*ptr++));
+  }
+  return len;
+}
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
@@ -100,11 +111,15 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-     LL_GPIO_TogglePin(LD3_GPIO_Port, LD3_Pin);
+
+    /* USER CODE BEGIN 3 */
+
+     /*LL_GPIO_TogglePin(LD3_GPIO_Port, LD3_Pin);
      LL_mDelay(200);
      LL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
-     LL_mDelay(200);
-    /* USER CODE BEGIN 3 */
+     LL_mDelay(200);*/
+     printf("Hello World!\n");
+     fflush(stdout);
   }
   /* USER CODE END 3 */
 }
