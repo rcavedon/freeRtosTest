@@ -118,7 +118,8 @@ int main(void)
      LL_mDelay(200);
      LL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
      LL_mDelay(200);*/
-     printf("Hello World!\n");
+     LL_mDelay(5000);
+     fprintf(stdout, "Hello World!\n");
      fflush(stdout);
   }
   /* USER CODE END 3 */

@@ -1,0 +1,8 @@
+
+
+vAssertCalled --> implementare un sistema di debug!!
+
+configUSE_IDLE_HOOK --> impostare e settare per quando non ci sono task attivi. Fa girare eventualmente l'intero sistema in lowpower
+
+
+https://www.freertos.org/a00110.html --> custom configuration

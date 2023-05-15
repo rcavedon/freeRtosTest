@@ -10,7 +10,7 @@
 
 /* Here is a good place to include header files that are required across
 your application. */
-//#include "something.h"
+#include "freeRTOS_debug.h"
 
 #define configUSE_PREEMPTION                    1
 #define configUSE_PORT_OPTIMISED_TASK_SELECTION 0
